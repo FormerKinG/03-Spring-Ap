@@ -6,10 +6,10 @@
 
     <!-- bean definitions here -->
 	<bean id="credit" class="in.arc.beans.CreditCardPayment"/>
+	<bean id="debit" class="in.arc.beans.DebitCardPayment"/>
 	<bean id="payment" class="in.arc.beans.PaymentService">
 		<constructor-arg name="iPayment" ref="debit"/>
 		<property name="payment" ref="credit"/>
 	</bean>
-	<bean id="debit" class="in.arc.beans.DebitCardPayment"/>
 
 </beans>
